@@ -49,7 +49,7 @@ Scalable data pipeline using Apache Spark, Airflow, and Azure Synapse to ingest 
 
 ## 📫 Let's Connect!
 
-- 🌐 [Portfolio Website](https://gowtham-pentela.github.io/Portfolio)  
+- 🌐 [Portfolio Website](https://gowtham-pentela.github.io/Portfolio/)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/gowtham-pentela/)  
 - ✉️ gowthampentela@outlook.com  
 
