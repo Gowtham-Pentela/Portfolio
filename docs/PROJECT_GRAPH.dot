@@ -1,0 +1,53 @@
+digraph ProjectGraph {
+  rankdir="LR";
+  graph [fontname="Helvetica"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+
+  "frontend/src/App.jsx" [fillcolor="#CFE8FF", color="#2B6CB0", penwidth="2"];
+  "frontend/src/components/About.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/About.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Contact.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Contact.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Cursor.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Experience.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Experience.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Footer.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Footer.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Hero.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Hero.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Nav.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Nav.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Projects.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Projects.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Stats.jsx" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/components/Stats.module.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/index.css" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/lib/useReveal.js" [fillcolor="#FFF7CC", color="#B7791F"];
+  "frontend/src/main.jsx" [fillcolor="#CFE8FF", color="#2B6CB0", penwidth="2"];
+  "src/index.css" [fillcolor="#F7FAFC", color="#4A5568"];
+  "src/main.jsx" [fillcolor="#CFE8FF", color="#2B6CB0", penwidth="2"];
+
+  "frontend/src/App.jsx" -> "frontend/src/components/About.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Contact.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Cursor.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Experience.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Footer.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Hero.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Nav.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Projects.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/components/Stats.jsx";
+  "frontend/src/App.jsx" -> "frontend/src/lib/useReveal.js";
+  "frontend/src/components/About.jsx" -> "frontend/src/components/About.module.css";
+  "frontend/src/components/Contact.jsx" -> "frontend/src/components/Contact.module.css";
+  "frontend/src/components/Experience.jsx" -> "frontend/src/components/Experience.module.css";
+  "frontend/src/components/Footer.jsx" -> "frontend/src/components/Footer.module.css";
+  "frontend/src/components/Hero.jsx" -> "frontend/src/components/Hero.module.css";
+  "frontend/src/components/Nav.jsx" -> "frontend/src/components/Nav.module.css";
+  "frontend/src/components/Projects.jsx" -> "frontend/src/components/Projects.module.css";
+  "frontend/src/components/Stats.jsx" -> "frontend/src/components/Stats.module.css";
+  "frontend/src/main.jsx" -> "frontend/src/App.jsx";
+  "frontend/src/main.jsx" -> "frontend/src/index.css";
+  "src/main.jsx" -> "frontend/src/App.jsx";
+  "src/main.jsx" -> "src/index.css";
+}

@@ -1,0 +1,820 @@
+{
+  "root": "/Users/gowtham/Desktop/portfolio",
+  "files_scanned": 36,
+  "file_summaries": [
+    {
+      "path": "README.md",
+      "extension": ".md",
+      "size_bytes": 4262,
+      "line_count": 167,
+      "role_guess": "Project documentation",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Reads, writes, or processes JSON-like data."
+      ]
+    },
+    {
+      "path": "backend/main.py",
+      "extension": ".py",
+      "size_bytes": 3220,
+      "line_count": 84,
+      "role_guess": "Application entry point",
+      "imports": [
+        "email.mime.multipart",
+        "email.mime.text",
+        "fastapi",
+        "fastapi.middleware.cors",
+        "os",
+        "pydantic",
+        "smtplib"
+      ],
+      "local_dependencies": [],
+      "functions": [
+        "contact",
+        "health"
+      ],
+      "classes": [
+        "ContactMessage"
+      ],
+      "env_vars": [
+        "FRONTEND_URL",
+        "RECIPIENT_EMAIL",
+        "SMTP_HOST",
+        "SMTP_PASS",
+        "SMTP_PORT",
+        "SMTP_USER"
+      ],
+      "key_notes": [
+        "Imports 7 external or internal modules.",
+        "Defines 2 function(s).",
+        "Defines 1 class(es).",
+        "Uses environment variable(s): FRONTEND_URL, RECIPIENT_EMAIL, SMTP_HOST, SMTP_PASS, SMTP_PORT, SMTP_USER.",
+        "Includes exception handling."
+      ]
+    },
+    {
+      "path": "backend/requirements.txt",
+      "extension": ".txt",
+      "size_bytes": 87,
+      "line_count": 4,
+      "role_guess": "Dependency or project configuration file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/index.html",
+      "extension": ".html",
+      "size_bytes": 1293,
+      "line_count": 21,
+      "role_guess": "API server or backend route module",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/package.json",
+      "extension": ".json",
+      "size_bytes": 461,
+      "line_count": 22,
+      "role_guess": "Dependency or project configuration file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/public/favicon.svg",
+      "extension": ".svg",
+      "size_bytes": 226,
+      "line_count": 4,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/App.jsx",
+      "extension": ".jsx",
+      "size_bytes": 1045,
+      "line_count": 41,
+      "role_guess": "Application entry point",
+      "imports": [
+        "./components/About",
+        "./components/Contact",
+        "./components/Cursor",
+        "./components/Experience",
+        "./components/Footer",
+        "./components/Hero",
+        "./components/Nav",
+        "./components/Projects",
+        "./components/Stats",
+        "./lib/useReveal",
+        "react"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/About.jsx",
+        "frontend/src/components/Contact.jsx",
+        "frontend/src/components/Cursor.jsx",
+        "frontend/src/components/Experience.jsx",
+        "frontend/src/components/Footer.jsx",
+        "frontend/src/components/Hero.jsx",
+        "frontend/src/components/Nav.jsx",
+        "frontend/src/components/Projects.jsx",
+        "frontend/src/components/Stats.jsx",
+        "frontend/src/lib/useReveal.js"
+      ],
+      "functions": [
+        "App"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 11 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/About.jsx",
+      "extension": ".jsx",
+      "size_bytes": 2968,
+      "line_count": 78,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./About.module.css"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/About.module.css"
+      ],
+      "functions": [
+        "About"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/About.module.css",
+      "extension": ".css",
+      "size_bytes": 1356,
+      "line_count": 76,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Contact.jsx",
+      "extension": ".jsx",
+      "size_bytes": 3424,
+      "line_count": 90,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Contact.module.css",
+        "react"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Contact.module.css"
+      ],
+      "functions": [
+        "Contact",
+        "handleChange"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 2 external or internal modules.",
+        "Defines 2 function(s).",
+        "Reads, writes, or processes JSON-like data."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Contact.module.css",
+      "extension": ".css",
+      "size_bytes": 2485,
+      "line_count": 123,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Cursor.jsx",
+      "extension": ".jsx",
+      "size_bytes": 1804,
+      "line_count": 57,
+      "role_guess": "Frontend component",
+      "imports": [
+        "react"
+      ],
+      "local_dependencies": [],
+      "functions": [
+        "Cursor",
+        "animate",
+        "onEnter",
+        "onLeave",
+        "onMove"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 5 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Experience.jsx",
+      "extension": ".jsx",
+      "size_bytes": 5492,
+      "line_count": 86,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Experience.module.css"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Experience.module.css"
+      ],
+      "functions": [
+        "Experience"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Experience.module.css",
+      "extension": ".css",
+      "size_bytes": 1609,
+      "line_count": 101,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Footer.jsx",
+      "extension": ".jsx",
+      "size_bytes": 365,
+      "line_count": 12,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Footer.module.css"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Footer.module.css"
+      ],
+      "functions": [
+        "Footer"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Footer.module.css",
+      "extension": ".css",
+      "size_bytes": 448,
+      "line_count": 22,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Hero.jsx",
+      "extension": ".jsx",
+      "size_bytes": 3592,
+      "line_count": 98,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Hero.module.css",
+        "react"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Hero.module.css"
+      ],
+      "functions": [
+        "Hero",
+        "TermLine"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 2 external or internal modules.",
+        "Defines 2 function(s).",
+        "Reads, writes, or processes JSON-like data."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Hero.module.css",
+      "extension": ".css",
+      "size_bytes": 2344,
+      "line_count": 112,
+      "role_guess": "Prompt or AI instruction logic",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Nav.jsx",
+      "extension": ".jsx",
+      "size_bytes": 1639,
+      "line_count": 53,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Nav.module.css",
+        "react"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Nav.module.css"
+      ],
+      "functions": [
+        "Nav",
+        "onScroll"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 2 external or internal modules.",
+        "Defines 2 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Nav.module.css",
+      "extension": ".css",
+      "size_bytes": 2196,
+      "line_count": 96,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Projects.jsx",
+      "extension": ".jsx",
+      "size_bytes": 5792,
+      "line_count": 117,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Projects.module.css"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Projects.module.css"
+      ],
+      "functions": [
+        "Projects"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Projects.module.css",
+      "extension": ".css",
+      "size_bytes": 2973,
+      "line_count": 154,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/components/Stats.jsx",
+      "extension": ".jsx",
+      "size_bytes": 649,
+      "line_count": 21,
+      "role_guess": "Frontend component",
+      "imports": [
+        "./Stats.module.css"
+      ],
+      "local_dependencies": [
+        "frontend/src/components/Stats.module.css"
+      ],
+      "functions": [
+        "Stats"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/components/Stats.module.css",
+      "extension": ".css",
+      "size_bytes": 872,
+      "line_count": 39,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/index.css",
+      "extension": ".css",
+      "size_bytes": 6214,
+      "line_count": 268,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "frontend/src/lib/useReveal.js",
+      "extension": ".js",
+      "size_bytes": 507,
+      "line_count": 21,
+      "role_guess": "Frontend component",
+      "imports": [
+        "react"
+      ],
+      "local_dependencies": [],
+      "functions": [
+        "useReveal"
+      ],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 1 external or internal modules.",
+        "Defines 1 function(s)."
+      ]
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "extension": ".jsx",
+      "size_bytes": 235,
+      "line_count": 10,
+      "role_guess": "Application entry point",
+      "imports": [
+        "./App.jsx",
+        "./index.css",
+        "react",
+        "react-dom/client"
+      ],
+      "local_dependencies": [
+        "frontend/src/App.jsx",
+        "frontend/src/index.css"
+      ],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 4 external or internal modules."
+      ]
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "extension": ".js",
+      "size_bytes": 261,
+      "line_count": 14,
+      "role_guess": "Configuration file",
+      "imports": [
+        "@vitejs/plugin-react",
+        "vite"
+      ],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 2 external or internal modules."
+      ]
+    },
+    {
+      "path": "index.html",
+      "extension": ".html",
+      "size_bytes": 1232,
+      "line_count": 20,
+      "role_guess": "API server or backend route module",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "package.json",
+      "extension": ".json",
+      "size_bytes": 334,
+      "line_count": 18,
+      "role_guess": "Dependency or project configuration file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "src/data/content.js",
+      "extension": ".js",
+      "size_bytes": 7562,
+      "line_count": 127,
+      "role_guess": "Frontend component",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "src/index.css",
+      "extension": ".css",
+      "size_bytes": 4175,
+      "line_count": 155,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": []
+    },
+    {
+      "path": "src/main.jsx",
+      "extension": ".jsx",
+      "size_bytes": 248,
+      "line_count": 10,
+      "role_guess": "Application entry point",
+      "imports": [
+        "../frontend/src/App.jsx",
+        "./index.css",
+        "react",
+        "react-dom/client"
+      ],
+      "local_dependencies": [
+        "frontend/src/App.jsx",
+        "src/index.css"
+      ],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 4 external or internal modules."
+      ]
+    },
+    {
+      "path": "tools/project_mapper.py",
+      "extension": ".py",
+      "size_bytes": 35127,
+      "line_count": 1129,
+      "role_guess": "Developer tooling script",
+      "imports": [
+        "__future__",
+        "argparse",
+        "ast",
+        "dataclasses",
+        "graphviz",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "typing"
+      ],
+      "local_dependencies": [],
+      "functions": [
+        "__init__",
+        "build_graphviz_graph",
+        "build_lookup_tables",
+        "collect_files",
+        "detect_entry_points",
+        "detect_env_vars",
+        "detect_python_package_roots",
+        "escape_dot",
+        "escape_mermaid_label",
+        "generate_key_notes",
+        "get_node_id",
+        "graph_node_attributes",
+        "guess_file_role",
+        "is_inside_output_dir",
+        "is_probably_text_file",
+        "main",
+        "parse_args",
+        "parse_javascript_like",
+        "parse_python",
+        "path_to_python_module",
+        "python_module_aliases",
+        "relative_path",
+        "render_dot",
+        "render_markdown",
+        "render_mermaid",
+        "resolve_local_dependencies",
+        "resolve_relative_js_import",
+        "resolve_relative_python_import",
+        "run",
+        "safe_read",
+        "summarize_file",
+        "write_graph_images",
+        "write_json",
+        "write_outputs"
+      ],
+      "classes": [
+        "FileSummary",
+        "ProjectMap",
+        "ProjectMapper"
+      ],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 10 external or internal modules.",
+        "Defines 34 function(s).",
+        "Defines 3 class(es).",
+        "May handle API keys or secrets. Verify secrets are loaded from environment variables.",
+        "Contains TODO or FIXME comments.",
+        "Includes exception handling."
+      ]
+    },
+    {
+      "path": "vercel.json",
+      "extension": ".json",
+      "size_bytes": 404,
+      "line_count": 26,
+      "role_guess": "Supporting project file",
+      "imports": [],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Reads, writes, or processes JSON-like data."
+      ]
+    },
+    {
+      "path": "vite.config.js",
+      "extension": ".js",
+      "size_bytes": 261,
+      "line_count": 14,
+      "role_guess": "Configuration file",
+      "imports": [
+        "@vitejs/plugin-react",
+        "vite"
+      ],
+      "local_dependencies": [],
+      "functions": [],
+      "classes": [],
+      "env_vars": [],
+      "key_notes": [
+        "Imports 2 external or internal modules."
+      ]
+    }
+  ],
+  "dependency_edges": [
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/About.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Contact.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Cursor.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Experience.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Footer.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Hero.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Nav.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Projects.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/components/Stats.jsx"
+    ],
+    [
+      "frontend/src/App.jsx",
+      "frontend/src/lib/useReveal.js"
+    ],
+    [
+      "frontend/src/components/About.jsx",
+      "frontend/src/components/About.module.css"
+    ],
+    [
+      "frontend/src/components/Contact.jsx",
+      "frontend/src/components/Contact.module.css"
+    ],
+    [
+      "frontend/src/components/Experience.jsx",
+      "frontend/src/components/Experience.module.css"
+    ],
+    [
+      "frontend/src/components/Footer.jsx",
+      "frontend/src/components/Footer.module.css"
+    ],
+    [
+      "frontend/src/components/Hero.jsx",
+      "frontend/src/components/Hero.module.css"
+    ],
+    [
+      "frontend/src/components/Nav.jsx",
+      "frontend/src/components/Nav.module.css"
+    ],
+    [
+      "frontend/src/components/Projects.jsx",
+      "frontend/src/components/Projects.module.css"
+    ],
+    [
+      "frontend/src/components/Stats.jsx",
+      "frontend/src/components/Stats.module.css"
+    ],
+    [
+      "frontend/src/main.jsx",
+      "frontend/src/App.jsx"
+    ],
+    [
+      "frontend/src/main.jsx",
+      "frontend/src/index.css"
+    ],
+    [
+      "src/main.jsx",
+      "frontend/src/App.jsx"
+    ],
+    [
+      "src/main.jsx",
+      "src/index.css"
+    ]
+  ],
+  "entry_points": [
+    "backend/main.py",
+    "frontend/src/App.jsx",
+    "frontend/src/main.jsx",
+    "src/main.jsx"
+  ],
+  "generated_files": [
+    "docs/PROJECT_MAP.md",
+    "docs/PROJECT_DEPENDENCIES.mmd",
+    "docs/PROJECT_GRAPH.dot",
+    "docs/PROJECT_GRAPH.png",
+    "docs/PROJECT_GRAPH.svg"
+  ]
+}

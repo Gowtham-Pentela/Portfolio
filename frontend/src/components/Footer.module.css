@@ -1,0 +1,22 @@
+.footer {
+  border-top: 1px solid var(--border2);
+  padding: 1.5rem var(--page-margin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--white3);
+}
+
+.teal { color: var(--teal); }
+
+@media (max-width: 768px) {
+  .footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}

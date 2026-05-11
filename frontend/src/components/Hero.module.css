@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem var(--page-margin) 4rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bgCircle {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,229,192,0.07) 0%, transparent 70%);
+  top: -200px; right: -200px;
+  pointer-events: none;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+.name span { color: var(--teal); }
+
+.role {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--white3);
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.terminal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: min(100%, 600px);
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+  overflow: hidden;
+}
+
+.termBar {
+  background: var(--bg3);
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--border2);
+}
+
+.dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.termBody {
+  padding: 1.2rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.9;
+  min-height: 140px;
+  overflow-wrap: anywhere;
+}
+
+.tLine   { display: flex; gap: 0.6rem; min-width: 0; }
+.tPrompt { color: var(--teal); }
+.tCmd    { color: var(--white); min-width: 0; overflow-wrap: anywhere; }
+.tOutput { color: var(--white2); padding-left: 1.2rem; }
+.tHl     { color: var(--teal); }
+.tAmber  { color: var(--amber); }
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .bgCircle { width: 300px; height: 300px; top: -100px; right: -100px; }
+
+  .name {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+  }
+
+  .role {
+    margin-bottom: 2rem;
+  }
+
+  .terminal {
+    margin-bottom: 2rem;
+  }
+
+  .termBody {
+    padding: 1rem;
+    font-size: 11px;
+    min-height: 128px;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
