@@ -7,7 +7,7 @@ export const META = {
   location: 'Springfield, IL (Open to Relocation)',
   linkedin: 'https://linkedin.com/in/gowtham-pentela/',
   github: 'https://github.com/Gowtham-Pentela',
-  portfolio: 'https://gowtham-pentela.github.io/Porifolio/',
+  portfolio: 'https://pentela.xyz/',
 }
 
 export const STATS = [

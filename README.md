@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Gowtham Pentela**, Applied AI Engineer.
 
-Live: [your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+Live: [pentela.xyz](https://pentela.xyz/)
 
 ---
 
@@ -122,7 +122,7 @@ In Vercel dashboard → Project → Settings → Environment Variables, add:
 | `SMTP_USER`      | `your-gmail@gmail.com`     |
 | `SMTP_PASS`      | `your-gmail-app-password`  |
 | `RECIPIENT_EMAIL`| `pentelagowtham@gmail.com` |
-| `FRONTEND_URL`   | `https://your-app.vercel.app` |
+| `FRONTEND_URL`   | `https://pentela.xyz` |
 
 > **Gmail app password:** Go to Google Account → Security → 2-Step Verification → App passwords.  
 > Generate one for "Mail" and use that as `SMTP_PASS`.

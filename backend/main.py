@@ -12,7 +12,7 @@ app = FastAPI(title="Gowtham Portfolio API", version="1.0.0")
 origins = [
     "http://localhost:5173",
     "http://localhost:4173",
-    os.getenv("FRONTEND_URL", "https://gowtham-pentela.vercel.app"),
+    os.getenv("FRONTEND_URL", "https://pentela.xyz"),
 ]
 
 app.add_middleware(

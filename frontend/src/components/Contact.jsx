@@ -44,7 +44,7 @@ export default function Contact() {
         {[
           { label: 'LinkedIn', url: 'https://linkedin.com/in/gowtham-pentela/' },
           { label: 'GitHub',   url: 'https://github.com/Gowtham-Pentela'       },
-          { label: 'Portfolio', url: 'https://gowtham-pentela.github.io/Porifolio/' },
+          { label: 'Portfolio', url: 'https://pentela.xyz/' },
         ].map(l => (
           <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className={styles.socialLink}>
             {l.label}
