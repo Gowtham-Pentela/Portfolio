@@ -26,24 +26,32 @@ export default function Cursor() {
       rafRef.current = requestAnimationFrame(animate)
     }
 
-    const onEnter = () => {
-      if (dotRef.current)  dotRef.current.style.transform  = 'scale(3)'
-      if (ringRef.current) ringRef.current.style.opacity   = '0.3'
+    const onOver = (e) => {
+      if (!e.target.closest('a, button, input, textarea')) return
+      if (dotRef.current) dotRef.current.style.transform = 'scale(3)'
+      if (ringRef.current) {
+        ringRef.current.style.opacity = '0.35'
+        ringRef.current.style.transform = 'scale(1.45)'
+      }
     }
-    const onLeave = () => {
-      if (dotRef.current)  dotRef.current.style.transform  = 'scale(1)'
-      if (ringRef.current) ringRef.current.style.opacity   = '1'
+    const onOut = (e) => {
+      if (!e.target.closest('a, button, input, textarea')) return
+      if (dotRef.current) dotRef.current.style.transform = 'scale(1)'
+      if (ringRef.current) {
+        ringRef.current.style.opacity = '1'
+        ringRef.current.style.transform = 'scale(1)'
+      }
     }
 
     document.addEventListener('mousemove', onMove)
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
-    })
+    document.addEventListener('mouseover', onOver)
+    document.addEventListener('mouseout', onOut)
     rafRef.current = requestAnimationFrame(animate)
 
     return () => {
       document.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseover', onOver)
+      document.removeEventListener('mouseout', onOut)
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
   }, [])

@@ -1,4 +1,6 @@
-.about { background: var(--bg); }
+.about {
+  background: transparent;
+}
 
 .grid {
   display: grid;
@@ -42,16 +44,34 @@
 }
 
 .skillCard {
-  background: var(--bg2);
+  background: rgba(13,20,32,0.78);
   border: 1px solid var(--border2);
   border-radius: 8px;
   padding: clamp(1rem, 2vw, 1.4rem);
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s;
   min-width: 0;
+  position: relative;
+  overflow: hidden;
 }
 .skillCard:hover {
   border-color: var(--border);
   background: var(--bg3);
+  transform: translateY(-4px);
+  box-shadow: 0 0 36px rgba(0,229,192,0.1);
+}
+
+.skillHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.skillHead span {
+  color: var(--white3);
+  font-family: var(--font-mono);
+  font-size: 10px;
 }
 
 .skillLabel {
@@ -60,13 +80,48 @@
   color: var(--teal);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.7rem;
+}
+
+.skillBar {
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(240,244,248,0.06);
+  margin-bottom: 1rem;
+}
+
+.skillFill {
+  display: block;
+  width: var(--level);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal2), var(--teal), var(--amber));
+  box-shadow: 0 0 16px rgba(0,229,192,0.36);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.skillsGrid:global(.visible) .skillFill {
+  transform: scaleX(1);
 }
 
 .skillTags {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+}
+
+.scoredTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.scoredTag strong {
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
 }
 
 @media (max-width: 980px) {

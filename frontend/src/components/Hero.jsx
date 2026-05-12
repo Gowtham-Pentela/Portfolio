@@ -26,37 +26,69 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={styles.bgCircle} />
 
-      <div className={styles.tag} style={{ animationDelay: '0.1s' }}>
-        Available for AI Engineer roles — USA
-      </div>
+      <div className={styles.heroGrid}>
+        <div>
+          <div className={styles.tag} style={{ animationDelay: '0.1s' }}>
+            Available for AI Engineer roles — USA
+          </div>
 
-      <h1 className={styles.name} style={{ animationDelay: '0.25s' }}>
-        Gowtham<br /><span>Pentela</span>
-      </h1>
+          <h1 className={styles.name} style={{ animationDelay: '0.25s' }}>
+            Gowtham<br /><span>Pentela</span>
+          </h1>
 
-      <div className={styles.role} style={{ animationDelay: '0.4s' }}>
-        Applied AI Engineer
-      </div>
+          <p className={styles.subtitle} style={{ animationDelay: '0.34s' }}>
+            Applied AI Engineer building reliable RAG, agentic workflow, and ML platforms
+            that survive production traffic, messy inputs, and real operational pressure.
+          </p>
 
-      <div className={styles.terminal} style={{ animationDelay: '0.55s' }}>
-        <div className={styles.termBar}>
-          <span className={styles.dot} style={{ background: '#ff5f57' }} />
-          <span className={styles.dot} style={{ background: '#febc2e' }} />
-          <span className={styles.dot} style={{ background: '#28c840' }} />
+          <div className={styles.role} style={{ animationDelay: '0.4s' }}>
+            LLM Systems · Data Platforms · Production ML
+          </div>
+
+          <div className={styles.cta} style={{ animationDelay: '0.5s' }}>
+            <a href="mailto:pentelagowtham@gmail.com" className="btn-primary">Get in touch</a>
+            <a href="#projects" className="btn-ghost">View work</a>
+            <a href="https://github.com/Gowtham-Pentela" target="_blank" rel="noreferrer" className="btn-ghost">GitHub</a>
+          </div>
         </div>
-        <div className={styles.termBody}>
-          {terminalLines.slice(0, visibleLines).map((line, i) => (
-            <TermLine key={i} line={line} isLast={i === visibleLines - 1} />
-          ))}
-        </div>
-      </div>
 
-      <div className={styles.cta} style={{ animationDelay: '0.7s' }}>
-        <a href="mailto:pentelagowtham@gmail.com" className="btn-primary">Get in touch</a>
-        <a href="https://linkedin.com/in/gowtham-pentela/" target="_blank" rel="noreferrer" className="btn-ghost">LinkedIn</a>
-        <a href="https://github.com/Gowtham-Pentela" target="_blank" rel="noreferrer" className="btn-ghost">GitHub</a>
+        <div className={styles.visualWrap} style={{ animationDelay: '0.55s' }}>
+          <div className={styles.floatCard}>
+            <div className={styles.cardTop}>
+              <span>resume.stats</span>
+              <span>live</span>
+            </div>
+            <div className={styles.statGrid}>
+              <Stat num="98%" label="Fault detection" />
+              <Stat num="96%" label="Faster processing" />
+              <Stat num="$30K" label="Cloud savings" />
+              <Stat num="10K+" label="Events / sec" />
+            </div>
+            <div className={styles.terminal}>
+              <div className={styles.termBar}>
+                <span className={styles.dot} style={{ background: '#ff5f57' }} />
+                <span className={styles.dot} style={{ background: '#febc2e' }} />
+                <span className={styles.dot} style={{ background: '#28c840' }} />
+              </div>
+              <div className={styles.termBody}>
+                {terminalLines.slice(0, visibleLines).map((line, i) => (
+                  <TermLine key={i} line={line} isLast={i === visibleLines - 1} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+  )
+}
+
+function Stat({ num, label }) {
+  return (
+    <div className={styles.stat}>
+      <strong>{num}</strong>
+      <span>{label}</span>
+    </div>
   )
 }
 

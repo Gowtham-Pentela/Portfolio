@@ -18,6 +18,8 @@
   margin-bottom: 4rem;
   position: relative;
   min-width: 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .item::before {
@@ -28,6 +30,11 @@
   border-radius: 50%;
   background: var(--teal);
   box-shadow: 0 0 12px var(--teal);
+}
+
+.item:hover {
+  transform: translateX(0.35rem);
+  filter: drop-shadow(0 0 22px rgba(0,229,192,0.14));
 }
 
 .meta {

@@ -2,6 +2,7 @@ import styles from './Projects.module.css'
 
 const featured = {
   num:   '01 / 03 · Featured · Live',
+  emoji: '🎓',
   title: 'LectureForge AI',
   sub:   'YouTube Lecture to Interactive Study Kit + Faculty Audit',
   liveUrl:   'https://lectureforge-ai.vercel.app/',
@@ -15,6 +16,7 @@ const featured = {
 const others = [
   {
     num:   '02 / 03',
+    emoji: '🛠️',
     title: 'Vulcan Pro',
     sub:   'Multimodal AI Agent for Technical Manuals',
     desc:  'A production-grade multi-step agentic system with routing, hybrid retrieval, and planning layers. Separates retrieval, reasoning, and generation stages to prevent compounding multi-stage failures. Implements structured fallback strategies and deterministic output schemas for reliable behavior on ambiguous inputs.',
@@ -24,6 +26,7 @@ const others = [
   },
   {
     num:   '03 / 03',
+    emoji: '⚡',
     title: 'TitanRAG',
     sub:   'End-to-End AI Workflow & Retrieval System',
     desc:  'Full RAG pipeline from document ingestion through vector search to LLM inference. Orchestration layer coordinates embeddings, retrieval, and response generation. Exposed via production-ready APIs for external integration. Deployed serverless on AWS Lambda and S3 for scalable, cost-efficient operation.',
@@ -44,7 +47,10 @@ export default function Projects() {
         <div className={styles.featuredHeader}>
           <div>
             <div className={styles.cardNum}>{featured.num}</div>
-            <div className={styles.cardTitle} style={{ fontSize: '1.7rem' }}>{featured.title}</div>
+            <div className={styles.titleRow}>
+              <span className={styles.emoji}>{featured.emoji}</span>
+              <div className={styles.cardTitle} style={{ fontSize: '1.7rem' }}>{featured.title}</div>
+            </div>
             <div className={styles.cardSub}>{featured.sub}</div>
           </div>
           <div className={styles.featuredBtns}>
@@ -93,7 +99,10 @@ export default function Projects() {
         {others.map((p, i) => (
           <div key={i} className={`${styles.card} reveal`} style={{ transitionDelay: `${i * 0.15}s` }}>
             <div className={styles.cardNum}>{p.num}</div>
-            <div className={styles.cardTitle}>{p.title}</div>
+            <div className={styles.titleRow}>
+              <span className={styles.emoji}>{p.emoji}</span>
+              <div className={styles.cardTitle}>{p.title}</div>
+            </div>
             <div className={styles.cardSub}>{p.sub}</div>
             <p className={styles.cardDesc}>{p.desc}</p>
             <div className={styles.tagRow}>

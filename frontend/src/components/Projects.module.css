@@ -22,13 +22,27 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
+
+.featuredCard::after,
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, rgba(0,229,192,0.1), rgba(245,166,35,0.08), transparent);
+  transform: translateX(-120%) skewX(-18deg);
+  pointer-events: none;
+}
 .featuredCard:hover,
 .card:hover {
   border-color: var(--border);
   background: var(--bg3);
+  box-shadow: 0 0 42px rgba(0,229,192,0.12);
 }
 .featuredCard:hover::before,
 .card:hover::before { opacity: 1; }
+.featuredCard:hover::after,
+.card:hover::after { animation: gradientSweep 0.85s ease; }
 
 /* Featured always has the teal top border visible */
 .featuredCard {
@@ -105,6 +119,25 @@
   margin-bottom: 0.3rem;
   letter-spacing: 0;
   overflow-wrap: anywhere;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.3rem;
+}
+
+.emoji {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0,229,192,0.14);
+  border-radius: 8px;
+  background: rgba(0,229,192,0.06);
+  font-size: 1.15rem;
 }
 
 .cardSub {

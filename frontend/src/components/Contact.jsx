@@ -36,9 +36,24 @@ export default function Contact() {
       </h2>
       <p className={styles.sub}>Remote · Hybrid · On-site · Open to relocation</p>
 
-      <a href="mailto:pentelagowtham@gmail.com" className={styles.email}>
-        pentelagowtham@gmail.com
-      </a>
+      <div className={styles.avatarWrap} aria-hidden="true">
+        <div className={styles.avatar}>GP</div>
+      </div>
+
+      <div className={styles.infoGrid}>
+        <a href="mailto:pentelagowtham@gmail.com" className={styles.infoCard}>
+          <span>Email</span>
+          <strong>pentelagowtham@gmail.com</strong>
+        </a>
+        <a href="tel:+12192648814" className={styles.infoCard}>
+          <span>Phone</span>
+          <strong>(219) 264-8814</strong>
+        </a>
+        <div className={styles.infoCard}>
+          <span>Location</span>
+          <strong>Springfield, IL</strong>
+        </div>
+      </div>
 
       <div className={styles.socialLinks}>
         {[
@@ -83,8 +98,6 @@ export default function Contact() {
         {status === 'ok'  && <p className={styles.msgOk}>Message sent! I will get back to you soon.</p>}
         {status === 'err' && <p className={styles.msgErr}>Something went wrong. Email me directly at pentelagowtham@gmail.com</p>}
       </form>
-
-      <div className={styles.location}>Springfield, IL · (219) 264-8814</div>
     </section>
   )
 }

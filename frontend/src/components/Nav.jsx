@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import styles from './Nav.module.css'
 
 const links = [
-  { href: '#about',      label: 'About'    },
+  { href: '#hero',       label: 'Home'     },
+  { href: '#skills',     label: 'Skills'   },
   { href: '#experience', label: 'Work'     },
   { href: '#projects',   label: 'Projects' },
+  { href: '#education',  label: 'Education' },
   { href: '#contact',    label: 'Contact'  },
 ]
 
