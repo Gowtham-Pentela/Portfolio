@@ -5,6 +5,12 @@ export default function Contact() {
   const [form, setForm]     = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState(null) // null | 'sending' | 'ok' | 'err'
 
+  const fallbackSubject = encodeURIComponent(`Portfolio inquiry from ${form.name || 'visitor'}`)
+  const fallbackBody = encodeURIComponent(
+    `Hi Gowtham,\n\n${form.message || 'I would like to connect about an AI Engineer opportunity.'}\n\nName: ${form.name || ''}\nEmail: ${form.email || ''}`
+  )
+  const fallbackMailto = `mailto:pentelagowtham@gmail.com?subject=${fallbackSubject}&body=${fallbackBody}`
+
   const handleChange = (e) =>
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
@@ -95,8 +101,19 @@ export default function Contact() {
         <button type="submit" className={`btn-primary ${styles.submitBtn}`} disabled={status === 'sending'}>
           {status === 'sending' ? 'Sending...' : 'Send message'}
         </button>
-        {status === 'ok'  && <p className={styles.msgOk}>Message sent! I will get back to you soon.</p>}
-        {status === 'err' && <p className={styles.msgErr}>Something went wrong. Email me directly at pentelagowtham@gmail.com</p>}
+        {status === 'ok' && (
+          <p className={styles.msgOk}>Message sent. I will get back to you soon.</p>
+        )}
+        {status === 'err' && (
+          <div className={styles.fallback}>
+            <p className={styles.msgErr}>
+              The form could not send right now, but your message is still ready to go by email.
+            </p>
+            <a href={fallbackMailto} className="btn-ghost">
+              Open email draft
+            </a>
+          </div>
+        )}
       </form>
     </section>
   )

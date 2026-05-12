@@ -193,7 +193,24 @@
 .submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .msgOk  { font-family: var(--font-mono); font-size: 12px; color: var(--teal); }
-.msgErr { font-family: var(--font-mono); font-size: 12px; color: #f87171; }
+.msgErr { font-family: var(--font-mono); font-size: 12px; color: #fca5a5; }
+
+.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(248,113,113,0.22);
+  border-radius: 8px;
+  background: rgba(248,113,113,0.06);
+}
+
+.fallback a {
+  flex: 0 0 auto;
+  padding: 0.55rem 1rem;
+  font-size: 10px;
+}
 
 .location {
   font-family: var(--font-mono);
@@ -220,6 +237,16 @@
 
   .submitBtn {
     align-self: stretch;
+    max-width: none;
+  }
+
+  .fallback {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fallback a {
+    width: 100%;
     max-width: none;
   }
 }
